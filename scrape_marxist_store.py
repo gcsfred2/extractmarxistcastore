@@ -15,10 +15,7 @@ import hashlib
 #    - On macOS/Linux: source venv/bin/activate
 # 6. Install required libraries:
 #    pip install requests beautifulsoup4
-# 7. Create a requirements.txt file to track dependencies by running:
-#    pip freeze > requirements.txt
-# 8. Save this script in a file named scrape_marxist_store.py in the project folder.
-# 9. Run the script using:
+# 7. Run the script using:
 #    python scrape_marxist_store.py
 
 def truncate_with_ellipsis(s, max_length):
