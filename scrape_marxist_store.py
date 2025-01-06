@@ -4,6 +4,8 @@ import csv
 import re
 import hashlib
 
+prod_hashes = {0: True}
+
 # Instructions to set up the project:
 # 1. Open Visual Studio Code (VSCode).
 # 2. Create a new folder for the project and open it in VSCode.
@@ -61,6 +63,11 @@ def scrape_category(url, max_items=3500):
             title = re.sub(r"[\",]", "", title)
             item_name = truncate_with_ellipsis(title, 36)
             title_hash = int(hashlib.sha256(title.encode('utf-8')).hexdigest(), 16)
+            # avoid duplicates
+            if title_hash in prod_hashes:
+                continue
+            else:
+                prod_hashes[title_hash] = True
             title_hash = title_hash % 10000000
             title_hash_str = "M" + str(title_hash)
             # Parse price to float
@@ -74,7 +81,7 @@ def scrape_category(url, max_items=3500):
 
         if main_page:
             break
-        
+
         page += 1
 
     return items
@@ -97,10 +104,10 @@ def scrape_marxist_store(categories, output_file, max_items_per_category=3500):
 
 if __name__ == "__main__":
     category_urls = [
-        "https://store.marxist.ca/",
         "https://store.marxist.ca/collections/books",
         "https://store.marxist.ca/collections/booklets",
         "https://store.marxist.ca/collections/papers"
+        # "https://store.marxist.ca/"
     ]
     output_csv = "marxist_store_items.csv"
     scrape_marxist_store(category_urls, output_csv)
