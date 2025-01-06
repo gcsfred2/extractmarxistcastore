@@ -39,7 +39,13 @@ def scrape_category(url, max_items=3500):
             break
 
         soup = BeautifulSoup(response.content, 'html.parser')
-        category = soup.find('h1', class_='collection-hero__title').get_text(strip=True)
+        main_page = False
+        cat_obj = soup.find('h1', class_='collection-hero__title')
+        if cat_obj is not None:
+            category = soup.find('h1', class_='collection-hero__title').get_text(strip=True)
+        else:
+            main_page = True
+            category = soup.find('h2', class_='title').get_text(strip=True)
         category = category.replace('Collection:','')
         products = soup.find_all('li', class_='grid__item')
 
@@ -66,6 +72,9 @@ def scrape_category(url, max_items=3500):
 
             items.append({'Item Name': item_name, 'Description': title, 'Reporting Category': category, 'Price': price, 'SKU': title_hash_str, 'Sellable': 'Y', 'Variation Name': ' ', 'Item Type': 'Physical'})
 
+        if main_page:
+            break
+        
         page += 1
 
     return items
@@ -88,6 +97,7 @@ def scrape_marxist_store(categories, output_file, max_items_per_category=3500):
 
 if __name__ == "__main__":
     category_urls = [
+        "https://store.marxist.ca/",
         "https://store.marxist.ca/collections/books",
         "https://store.marxist.ca/collections/booklets",
         "https://store.marxist.ca/collections/papers"
