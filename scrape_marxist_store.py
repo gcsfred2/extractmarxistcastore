@@ -57,9 +57,17 @@ def scrape_category(url, max_items=3500):
         for product in products:
             if len(items) >= max_items:
                 break
+            a_elem = product.find('a')
+            prod_details = a_elem['href']
+            prod_details_resp = requests.get(f"{url}{prod_details}", headers=headers)
 
-            price_text = product.find('span', class_='price-item--regular').get_text(strip=True)
-            title = product.find('h3', class_='card__heading').get_text(strip=True)
+            if prod_details_resp.status_code != 200:
+                print(f"Failed to retrieve product details from {url}{prod_details}: {prod_details_resp.status_code}")
+                break
+
+            prod_details_soup = BeautifulSoup(prod_details_resp.content, 'html.parser')
+            price_text = prod_details_soup.find('span', class_='price-item--regular').get_text(strip=True)
+            title = prod_details_soup.find('h1').get_text(strip=True)
             title = re.sub(r"[\",]", "", title)
             item_name = truncate_with_ellipsis(title, 36)
             title_hash = int(hashlib.sha256(title.encode('utf-8')).hexdigest(), 16)
