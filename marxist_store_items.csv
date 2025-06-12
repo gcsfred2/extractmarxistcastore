@@ -1,4 +1,10 @@
 Item Name,Description,Reporting Category,Price,SKU,Sellable,Variation Name,Item Type
+IDOM 49 1945 ... Betrayal,1945 Liberation Revolution and Betrayal,IDOM,8.0,M85004,Y, ,Physical
+IDOM 48 Science ... revolution,Science Progress crisis and revolution,IDOM,8.0,M8023158,Y, ,Physical
+IDOM 47 The Struggle ... Revolution,The Struggle for World Revolution,IDOM,8.0,M8517628,Y, ,Physical
+IDOM 46 The Necessity of Art,The Necessity of Art,IDOM,8.0,M3252702,Y, ,Physical
+IDOM 45 The African Revolution,The African Revolution,IDOM,8.0,M5993086,Y, ,Physical
+IDOM 44 LENIN LIVES!,LENIN LIVES! 1924-2024,IDOM,8.0,M7299432,Y, ,Physical
 Left-Wing Commun...fantile Disorder,Left-Wing Communism: An Infantile Disorder,Books,21.0,M4105695,Y, ,Physical
 1917 - La révolution russe,1917 - La révolution russe,Books,10.0,M5656447,Y, ,Physical
 Anarquismo y Comunismo,Anarquismo y Comunismo,Books,13.0,M1297171,Y, ,Physical
@@ -18,9 +24,11 @@ Colossus: The Ri...f US Imperialism,Colossus: The Rise and Decline of US Imperia
 Contre le révisi...ense du marxisme,Contre le révisionnisme pour la défense du marxisme,Books,15.0,M3142072,Y, ,Physical
 Contribution to ...olitical Economy,Contribution to the Critique of Political Economy,Books,10.0,M6281021,Y, ,Physical
 Crisis of the Fr...ection [1935-36],Crisis of the French Section [1935-36],Books,30.0,M2883768,Y, ,Physical
+Democracy Bonapa...les in the 1930s,Democracy Bonapartism and Fascism: Class Struggles in the 1930s,Books,34.0,M8674985,Y, ,Physical
 Dialectics of Nature,Dialectics of Nature,Books,36.0,M5595757,Y, ,Physical
 El Estado y la Revolución,El Estado y la Revolución,Books,13.0,M9135337,Y, ,Physical
 Empiricism and its Evolution,Empiricism and its Evolution,Books,20.0,M6416168,Y, ,Physical
+En défense du marxisme,En défense du marxisme,Books,24.0,M7900644,Y, ,Physical
 First Five Years...st International,First Five Years of the Communist International,Books,51.0,M6176791,Y, ,Physical
 First World War:... Great Slaughter,First World War: A Marxist Analysis of the Great Slaughter,Books,24.0,M4730190,Y, ,Physical
 Germany 1918-193...ism or Barbarism,Germany 1918-1933: Socialism or Barbarism,Books,36.0,M9506079,Y, ,Physical
@@ -69,7 +77,7 @@ Marx and Engels ...Works: Volume 22,Marx and Engels Collected Works: Volume 22,B
 Marx and Engels ...es: Volume Three,Marx and Engels Selected Works in Three Volumes: Volume Three,Books,20.0,M5750320,Y, ,Physical
 Marx and Engels ...umes: Volume Two,Marx and Engels Selected Works in Three Volumes: Volume Two,Books,20.0,M7557911,Y, ,Physical
 Marx Engels Leni... the Proletariat,Marx Engels Lenin: On the Dictatorship of the Proletariat,Books,20.0,M1967546,Y, ,Physical
-Marx works on France Trilogy,Marx works on France Trilogy,Books,69.0,M6064801,Y, ,Physical
+Marx works on France Trilogy,Marx works on France Trilogy,Books,60.0,M6064801,Y, ,Physical
 Marxism and Anarchism,Marxism and Anarchism,Books,31.0,M8089054,Y, ,Physical
 Marxism and the USA,Marxism and the USA,Books,26.0,M5535944,Y, ,Physical
 Marxism vs Ident...fight oppression,Marxism vs Identity Politics: How to fight oppression,Books,10.0,M7504812,Y, ,Physical
@@ -85,7 +93,6 @@ Peasant War in Germany,Peasant War in Germany,Books,20.0,M2326,Y, ,Physical
 Permanent Revolu...ts and Prospects,Permanent Revolution and Results and Prospects,Books,29.0,M3820605,Y, ,Physical
 Permanent Revolu...in Latin America,Permanent Revolution in Latin America,Books,36.0,M3001684,Y, ,Physical
 Poverty of Philosophy,Poverty of Philosophy,Books,10.0,M5262972,Y, ,Physical
-PRE-ORDER: Democ...les in the 1930s,PRE-ORDER: Democracy Bonapartism and Fascism: Class Struggles in the 1930s,Books,34.0,M4910222,Y, ,Physical
 Problems of Everyday Life,Problems of Everyday Life,Books,30.0,M5591512,Y, ,Physical
 Que faire?,Que faire?,Books,15.0,M8586027,Y, ,Physical
 Reason in Revolt,Reason in Revolt,Books,36.0,M6292933,Y, ,Physical
@@ -105,9 +112,8 @@ State and Revolution,State and Revolution,Books,14.0,M4955194,Y, ,Physical
 Struggle Against Fascism in Germany,Struggle Against Fascism in Germany,Books,40.0,M3268006,Y, ,Physical
 Struggle for a Proletarian Party,Struggle for a Proletarian Party,Books,30.0,M765091,Y, ,Physical
 Teamster Rebellion,Teamster Rebellion,Books,30.0,M7601850,Y, ,Physical
-Ted Grant Selected Works: Volume 1,Ted Grant Selected Works: Volume 1,Books,30.0,M9744706,Y, ,Physical
-Ted Grant Selected Works: Volume 2,Ted Grant Selected Works: Volume 2,Books,30.0,M5675776,Y, ,Physical
 Ted Grant Writings Volume 1,Ted Grant Writings Volume 1,Books,35.0,M9288709,Y, ,Physical
+Ted Grant Writings Volume 1 + Vol 2,Ted Grant Writings Volume 1 + Vol 2,Books,60.0,M7658133,Y, ,Physical
 Ted Grant Writings Volume 2,Ted Grant Writings Volume 2,Books,35.0,M8918792,Y, ,Physical
 Ted Grant: The P...nt Revolutionary,Ted Grant: The Permanent Revolutionary,Books,30.0,M232555,Y, ,Physical
 The Civil War in France,The Civil War in France,Books,23.0,M6038215,Y, ,Physical
@@ -124,11 +130,14 @@ What is Marxism?,What is Marxism?,Books,24.0,M9644308,Y, ,Physical
 What is to be done?,What is to be done?,Books,24.0,M4117210,Y, ,Physical
 Where is Britain going?,Where is Britain going?,Books,15.0,M8402874,Y, ,Physical
 Women and the Family,Women and the Family,Books,19.0,M9476842,Y, ,Physical
-Women Family and...ssian Revolution,Women Family and the Russian Revolution,Books,34.2,M3291750,Y, ,Physical
+Women Family and...ssian Revolution,Women Family and the Russian Revolution,Books,38.0,M3291750,Y, ,Physical
 Beethoven : L'ho... révolutionnaire,Beethoven : L'homme le compositeur le révolutionnaire,Booklets,5.0,M9910811,Y, ,Physical
+Beethoven and Sh...rs of Revolution,Beethoven and Shostakovich: Composers of Revolution,Booklets,5.0,M3394196,Y, ,Physical
 Black Struggle a...alist Revolution,Black Struggle and the Socialist Revolution,Booklets,5.0,M1636432,Y, ,Physical
+Black struggle a...alist Revolution,Black struggle and the Socialist Revolution,Booklets,5.0,M5720357,Y, ,Physical
 China's Long March to Capitalism,China's Long March to Capitalism,Booklets,5.0,M6310634,Y, ,Physical
 Chostakovitch : ...révolution russe,Chostakovitch : La conscience musicale de la révolution russe,Booklets,5.0,M8062835,Y, ,Physical
+Class Struggle a...rican Revolution,Class Struggle and the American Revolution,Booklets,5.0,M3342966,Y, ,Physical
 Classe parti et ...r une révolution,Classe parti et direction : comment organiser une révolution,Booklets,5.0,M6193785,Y, ,Physical
 Climate Crisis a...Marxist Solution,Climate Crisis and the Marxist Solution,Booklets,5.0,M8923372,Y, ,Physical
 Communism or Mutual Aid?,Communism or Mutual Aid?,Booklets,5.0,M7041350,Y, ,Physical
@@ -176,7 +185,6 @@ Manifeste de la ...s propres moyens,Manifeste de la CSN : Ne comptons que sur no
 Manifeste du Parti communiste,Manifeste du Parti communiste,Booklets,5.0,M4880766,Y, ,Physical
 Manifesto of the...st International,Manifesto of the Revolutionary Communist International,Booklets,10.0,M288267,Y, ,Physical
 Marxism and Religion,Marxism and Religion,Booklets,5.0,M859464,Y, ,Physical
-Marxism and Terrorism,Marxism and Terrorism,Booklets,10.0,M11885,Y, ,Physical
 Marxism and the Black Panther Party,Marxism and the Black Panther Party,Booklets,5.0,M6120734,Y, ,Physical
 Marxism and the ...ipation of Women,Marxism and the Emancipation of Women,Booklets,5.0,M3013276,Y, ,Physical
 Marxism Mutual Aid and Direct Action,Marxism Mutual Aid and Direct Action,Booklets,5.0,M5474437,Y, ,Physical
@@ -188,6 +196,7 @@ POUR MEMBRES SEU...s membres du PCR,POUR MEMBRES SEULEMENT - Guide des membres d
 Programme of the International,Programme of the International,Booklets,5.0,M6544034,Y, ,Physical
 Qu'est ce que le...nt le combattre?,Qu'est ce que le fascisme et comment le combattre?,Booklets,5.0,M2330101,Y, ,Physical
 Reform or Revolution,Reform or Revolution,Booklets,5.0,M7985409,Y, ,Physical
+Reply to the Whi...ort on Socialism,Reply to the White House report on Socialism,Booklets,5.0,M4967174,Y, ,Physical
 Revolutionary Press,Revolutionary Press,Booklets,5.0,M7280349,Y, ,Physical
 Révolutions françaises,Révolutions françaises,Booklets,5.0,M8670846,Y, ,Physical
 Rise of Stalinis...the Soviet Union,Rise of Stalinism: The degeneration of the Soviet Union,Booklets,5.0,M5493463,Y, ,Physical
@@ -195,6 +204,7 @@ Salaire prix et profit,Salaire prix et profit,Booklets,5.0,M1554524,Y, ,Physical
 Socialism Made Easy,Socialism Made Easy,Booklets,5.0,M2836554,Y, ,Physical
 Socialism: Utopian and Scientific,Socialism: Utopian and Scientific,Booklets,5.0,M652451,Y, ,Physical
 Socialisme utopi...sme scientifique,Socialisme utopique et socialisme scientifique,Booklets,5.0,M4199434,Y, ,Physical
+Songs of Revolut...ongbook edition),Songs of Revolution (US Songbook edition),Booklets,5.0,M584015,Y, ,Physical
 Textes sur la presse révolutionnaire,Textes sur la presse révolutionnaire,Booklets,20.0,M8526263,Y, ,Physical
 The Civil War: A...econd Revolution,The Civil War: America's Second Revolution,Booklets,5.0,M7634873,Y, ,Physical
 The Crimes of Br...ialism (LIMITED),The Crimes of British Imperialism (LIMITED),Booklets,20.0,M6962777,Y, ,Physical
@@ -210,12 +220,14 @@ What is Historical Materialism?,What is Historical Materialism?,Booklets,5.0,M58
 What is Marxist Economics?,What is Marxist Economics?,Booklets,5.0,M1163586,Y, ,Physical
 What Way Forward...uban Revolution?,What Way Forward for the Cuban Revolution?,Booklets,5.0,M2089549,Y, ,Physical
 Why Socialism?,Why Socialism?,Booklets,5.0,M9520840,Y, ,Physical
+Why you should b...munist (LIMITED),Why you should be a Communist (LIMITED),Booklets,5.0,M2136588,Y, ,Physical
 Workers' Control and Nationalization,Workers' Control and Nationalization,Booklets,5.0,M8341979,Y, ,Physical
+Communist Revolution Issue 16 June,Communist Revolution Issue 16 June,Communist Revolution,5.0,M4664732,Y, ,Physical
+Communist Revolu...s - Latest Issue,Communist Revolution Bundles - Latest Issue,Communist Revolution,20.0,M7532988,Y, ,Physical
 Communist Revolution Issue 15 - May,Communist Revolution Issue 15 - May,Communist Revolution,5.0,M9145505,Y, ,Physical
 Communist Revolu...Issue 14 - April,Communist Revolution Issue 14 - April,Communist Revolution,5.0,M49063,Y, ,Physical
 Communist Revolu...Issue 13 - March,Communist Revolution Issue 13 - March,Communist Revolution,5.0,M3989721,Y, ,Physical
 Communist Revolu...ue 12 - February,Communist Revolution Issue 12 - February,Communist Revolution,5.0,M5098107,Y, ,Physical
-Communist Revolu...s - Latest Issue,Communist Revolution Bundles - Latest Issue,Communist Revolution,20.0,M7532988,Y, ,Physical
 Communist Revolu...ue 11 - December,Communist Revolution Issue 11 - December,Communist Revolution,5.0,M5841322,Y, ,Physical
 Communist Revolu...ue 10 - November,Communist Revolution Issue 10 - November,Communist Revolution,5.0,M706153,Y, ,Physical
 Communist Revolu...ssue 9 - October,Communist Revolution Issue 9 - October,Communist Revolution,5.0,M6992409,Y, ,Physical

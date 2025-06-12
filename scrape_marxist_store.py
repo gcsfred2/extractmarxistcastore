@@ -97,10 +97,36 @@ def scrape_category(url, max_items=3500):
 def scrape_marxist_store(categories, output_file, max_items_per_category=3500):
     all_items = []
 
+    # IDOM
+    extra_idom_csv = "idom_items.csv"
+    with open(extra_idom_csv, mode='r', newline='', encoding='utf-8') as file:
+        reader = csv.DictReader(file, fieldnames=['Item Name', 'Description', 'Price'])
+        header = True
+        items = []
+        for row in reader:
+            if header:
+                header = False
+                continue
+            item_name = truncate_with_ellipsis(row['Item Name'], 36)
+            title_hash = int(hashlib.sha256(row['Item Name'].encode('utf-8')).hexdigest(), 16)
+            # avoid duplicates
+            if title_hash in prod_hashes:
+                continue
+            else:
+                prod_hashes[title_hash] = True
+            title_hash = title_hash % 10000000
+            title_hash_str = "M" + str(title_hash)
+            # Parse price to float
+            price = float(re.sub(r"[^0-9.]", "", row['Price']))
+            items.append({'Item Name': row['Item Name'], 'Description': row['Description'], 'Reporting Category': 'IDOM', 'Price': price, 'SKU': title_hash_str, 'Sellable': 'Y', 'Variation Name': ' ', 'Item Type': 'Physical'})
+        all_items.extend(items)
+
+    # website scraping
     for category_url in categories:
         print(f"Scraping category: {category_url}")
         items = scrape_category(category_url, max_items=max_items_per_category)
         all_items.extend(items)
+
 
     # Write to CSV
     with open(output_file, mode='w', newline='', encoding='utf-8') as file:
