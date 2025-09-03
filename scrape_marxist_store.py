@@ -69,7 +69,7 @@ def scrape_category(url, max_items=3500):
             price_text = prod_details_soup.find('span', class_='price-item--regular').get_text(strip=True)
             title = prod_details_soup.find('h1').get_text(strip=True)
             title = re.sub(r"[\",]", "", title)
-            item_name = truncate_with_ellipsis(title, 36)
+            item_name = truncate_with_ellipsis(title, 40)
             title_hash = int(hashlib.sha256(title.encode('utf-8')).hexdigest(), 16)
             # avoid duplicates
             if title_hash in prod_hashes:
