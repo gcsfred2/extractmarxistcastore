@@ -28,7 +28,7 @@ def truncate_with_ellipsis(s, max_length):
     part_length = (max_length - 3) // 2
     return s[:part_length] + '...' + s[-part_length:]
 
-def scrape_category(url, max_items=3500):
+def scrape_category(url, items_to_exclude, max_items=3500):
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'}
     items = []
     page = 1
@@ -78,6 +78,11 @@ def scrape_category(url, max_items=3500):
                 prod_hashes[title_hash] = True
             title_hash = title_hash % 10000000
             title_hash_str = "M" + str(title_hash)
+
+            if title in items_to_exclude: # exact match
+                print(f"Excluding item with title {title} and SKU {title_hash_str}")
+                continue
+
             # Parse price to float
             try:
                 price = float(re.sub(r"[^0-9.]", "", price_text))
@@ -96,6 +101,20 @@ def scrape_category(url, max_items=3500):
 
 def scrape_marxist_store(categories, output_file, max_items_per_category=3500):
     all_items = []
+    items_to_exclude = []
+
+    # product codes (hashes) to be excluded
+    items_to_exclude_csv = "items_to_exclude.csv"
+    with open(items_to_exclude_csv, mode='r', newline='', encoding='utf-8') as file:
+        reader = csv.DictReader(file, fieldnames=['Title'])
+        header = True
+        items1 = []
+        for row in reader:
+            if header:
+                header = False
+                continue
+            items1.append(row['Title'])
+        items_to_exclude.extend(items1)
 
     # IDOM
     extra_idom_csv = "idom_items.csv"
@@ -124,7 +143,7 @@ def scrape_marxist_store(categories, output_file, max_items_per_category=3500):
     # website scraping
     for category_url in categories:
         print(f"Scraping category: {category_url}")
-        items = scrape_category(category_url, max_items=max_items_per_category)
+        items = scrape_category(category_url, items_to_exclude,  max_items=max_items_per_category)
         all_items.extend(items)
 
 
