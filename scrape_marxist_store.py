@@ -28,7 +28,7 @@ def truncate_with_ellipsis(s, max_length):
     part_length = (max_length - 3) // 2
     return s[:part_length] + '...' + s[-part_length:]
 
-def scrape_category(url, items_to_exclude, max_items=3500):
+def scrape_category(url, items_to_exclude, items_to_rename, max_items=3500):
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'}
     items = []
     page = 1
@@ -69,7 +69,11 @@ def scrape_category(url, items_to_exclude, max_items=3500):
             price_text = prod_details_soup.find('span', class_='price-item--regular').get_text(strip=True)
             title = prod_details_soup.find('h1').get_text(strip=True)
             title = re.sub(r"[\",]", "", title)
-            item_name = truncate_with_ellipsis(title, 40)
+            candidate_item_name = title
+            for mustmatchtitle, replaceto in items_to_rename.items():
+                if mustmatchtitle in title:
+                    candidate_item_name = title.replace(mustmatchtitle, replaceto, 1)
+            item_name = truncate_with_ellipsis(candidate_item_name, 40)
             title_hash = int(hashlib.sha256(title.encode('utf-8')).hexdigest(), 16)
             # avoid duplicates
             if title_hash in prod_hashes:
@@ -102,6 +106,7 @@ def scrape_category(url, items_to_exclude, max_items=3500):
 def scrape_marxist_store(categories, output_file, max_items_per_category=3500):
     all_items = []
     items_to_exclude = []
+    items_to_rename = {}
 
     # product codes (hashes) to be excluded
     items_to_exclude_csv = "items_to_exclude.csv"
@@ -115,6 +120,18 @@ def scrape_marxist_store(categories, output_file, max_items_per_category=3500):
                 continue
             items1.append(row['Title'])
         items_to_exclude.extend(items1)
+
+    # item names to be renamed
+    items_to_rename_csv = "items_to_rename.csv"
+    with open(items_to_rename_csv, mode='r', newline='', encoding='utf-8') as file:
+        reader = csv.DictReader(file, fieldnames=['title','rename_to'])
+        header = True
+        for row in reader:
+            if header:
+                header = False
+                continue
+            items_to_rename[row['title']] = row['rename_to']
+        
 
     # IDOM
     extra_idom_csv = "idom_items.csv"
@@ -143,7 +160,7 @@ def scrape_marxist_store(categories, output_file, max_items_per_category=3500):
     # website scraping
     for category_url in categories:
         print(f"Scraping category: {category_url}")
-        items = scrape_category(category_url, items_to_exclude,  max_items=max_items_per_category)
+        items = scrape_category(category_url, items_to_exclude, items_to_rename, max_items=max_items_per_category)
         all_items.extend(items)
 
 
