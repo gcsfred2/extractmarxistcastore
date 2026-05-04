@@ -32,7 +32,8 @@ def scrape_category(url, items_to_exclude, items_to_rename, max_items=3500):
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'}
     items = []
     page = 1
-
+    first_CR_item = True
+    
     while len(items) < max_items:
         response = requests.get(f"{url}?page={page}", headers=headers)
 
@@ -74,6 +75,12 @@ def scrape_category(url, items_to_exclude, items_to_rename, max_items=3500):
                 if mustmatchtitle in title:
                     candidate_item_name = title.replace(mustmatchtitle, replaceto, 1)
             item_name = truncate_with_ellipsis(candidate_item_name, 40)
+            
+            # add a ** before the first CR item to make sure it appears at the top of the list when sorted alphabetically by item name
+            if category == "Communist Revolution" and first_CR_item:
+                item_name = "** " + item_name
+                first_CR_item = False
+
             title_hash = int(hashlib.sha256(title.encode('utf-8')).hexdigest(), 16)
             # avoid duplicates
             if title_hash in prod_hashes:
