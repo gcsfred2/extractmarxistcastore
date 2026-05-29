@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import csv
 import re
 import hashlib
+import time
 
 prod_hashes = {0: True}
 
@@ -28,7 +29,7 @@ def truncate_with_ellipsis(s, max_length):
     part_length = (max_length - 3) // 2
     return s[:part_length] + '...' + s[-part_length:]
 
-def scrape_category(url, items_to_exclude, items_to_rename, max_items=3500):
+def scrape_category(url, items_to_exclude, items_to_rename, max_items=4500):
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'}
     items = []
     page = 1
@@ -54,8 +55,10 @@ def scrape_category(url, items_to_exclude, items_to_rename, max_items=3500):
 
         if not products:
             break  # Exit if no products found on the page
+        time.sleep(6.4)
 
         for product in products:
+            time.sleep(12.8)
             if len(items) >= max_items:
                 break
             a_elem = product.find('a')
