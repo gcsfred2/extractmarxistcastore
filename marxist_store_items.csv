@@ -1,16 +1,17 @@
 Item Name,Description,Reporting Category,Price,SKU,Sellable,Variation Name,Item Type
-IDOM 53 Latin America,Latin America - The Unfinished Revolution,IDOM,8.0,M6722841,Y, ,Physical
-IDOM 52 Sudan,Sudan from Revolution to Barbarism,IDOM,8.0,M634132,Y, ,Physical
-IDOM 51 Permanent Revol,The Permanent Revolution,IDOM,8.0,M635974,Y, ,Physical
-IDOM 50 Reform or Rev,Reform or Revolution?,IDOM,8.0,M4291065,Y, ,Physical
-IDOM 49 1945 ... Betrayal,1945 Liberation Revolution and Betrayal,IDOM,8.0,M85004,Y, ,Physical
-IDOM 48 Science ... revolution,Science Progress crisis and revolution,IDOM,8.0,M8023158,Y, ,Physical
-IDOM 47 The Struggle ... Revolution,The Struggle for World Revolution,IDOM,8.0,M8517628,Y, ,Physical
-IDOM 46 The Necessity of Art,The Necessity of Art,IDOM,8.0,M3252702,Y, ,Physical
-IDOM 45 The African Revolution,The African Revolution,IDOM,8.0,M5993086,Y, ,Physical
-IDOM 44 LENIN LIVES!,LENIN LIVES! 1924-2024,IDOM,8.0,M7299432,Y, ,Physical
-IDOM 43 Struggle for Communism,The Struggle for Communism,IDOM,8.0,M8494701,Y, ,Physical
-IDOM 42 The State,The State,IDOM,8.0,M5430781,Y, ,Physical
+IDOM 54 Rojava,The Rojava Revolution,IDOM,10.0,M3521015,Y, ,Physical
+IDOM 53 Latin America,Latin America - The Unfinished Revolution,IDOM,10.0,M6722841,Y, ,Physical
+IDOM 52 Sudan,Sudan from Revolution to Barbarism,IDOM,10.0,M634132,Y, ,Physical
+IDOM 51 Permanent Revol,The Permanent Revolution,IDOM,10.0,M635974,Y, ,Physical
+IDOM 50 Reform or Rev,Reform or Revolution?,IDOM,10.0,M4291065,Y, ,Physical
+IDOM 49 1945 ... Betrayal,1945 Liberation Revolution and Betrayal,IDOM,10.0,M85004,Y, ,Physical
+IDOM 48 Science ... revolution,Science Progress crisis and revolution,IDOM,10.0,M8023158,Y, ,Physical
+IDOM 47 The Struggle ... Revolution,The Struggle for World Revolution,IDOM,10.0,M8517628,Y, ,Physical
+IDOM 46 The Necessity of Art,The Necessity of Art,IDOM,10.0,M3252702,Y, ,Physical
+IDOM 45 The African Revolution,The African Revolution,IDOM,10.0,M5993086,Y, ,Physical
+IDOM 44 LENIN LIVES!,LENIN LIVES! 1924-2024,IDOM,10.0,M7299432,Y, ,Physical
+IDOM 43 Struggle for Communism,The Struggle for Communism,IDOM,10.0,M8494701,Y, ,Physical
+IDOM 42 The State,The State,IDOM,10.0,M5430781,Y, ,Physical
 Revolution and  Co...arxist Perspective,Revolution and  Counterrevolution in America: A Marxist Perspective,Books,40.0,M3702075,Y, ,Physical
 Venezuelan Revolut...arxist Perspective,Venezuelan Revolution: A Marxist Perspective,Books,30.0,M98755,Y, ,Physical
 Ted Grant Collecte...ftermath (1945-46),Ted Grant Collected Writings Vol. 3: The Aftermath (1945-46),Books,45.0,M4554072,Y, ,Physical
@@ -169,8 +170,8 @@ La rébellion des Patriotes,La rébellion des Patriotes,Booklets,5.0,M1708904,Y,
 Manifeste de la CS...nos propres moyens,Manifeste de la CSN : Ne comptons que sur nos propres moyens,Booklets,5.0,M7839415,Y, ,Physical
 La lutte des Autoc...pour le socialisme,La lutte des Autochtones et la lutte pour le socialisme,Booklets,8.0,M555193,Y, ,Physical
 Lenin and the National Question,Lenin and the National Question,Booklets,5.0,M2511199,Y, ,Physical
-Black Struggle and...cialist Revolution,Black Struggle and the Socialist Revolution,Booklets,5.0,M1636432,Y, ,Physical
 What Causes Capitalist Crisis?,What Causes Capitalist Crisis?,Booklets,5.0,M6088710,Y, ,Physical
+Black Struggle and...cialist Revolution,Black Struggle and the Socialist Revolution,Booklets,5.0,M1636432,Y, ,Physical
 Classe parti et di...ser une révolution,Classe parti et direction : comment organiser une révolution,Booklets,5.0,M6193785,Y, ,Physical
 Lénine sur la question nationale,Lénine sur la question nationale,Booklets,5.0,M3536564,Y, ,Physical
 Le marxisme et l'émancipation des femmes,Le marxisme et l'émancipation des femmes,Booklets,4.8,M559817,Y, ,Physical
@@ -178,8 +179,8 @@ La montée du stali...l'Union soviétique,La montée du stalinisme et la dégén
 Qu'est ce que le f...ment le combattre?,Qu'est ce que le fascisme et comment le combattre?,Booklets,5.0,M2330101,Y, ,Physical
 Introduction au ma...ialisme historique,Introduction au marxisme #2 : Introduction au matérialisme historique,Booklets,5.0,M3436055,Y, ,Physical
 Lessons of Chile 1973,Lessons of Chile 1973,Booklets,5.0,M8974320,Y, ,Physical
-Programme of the International,Programme of the International,Booklets,5.0,M6544034,Y, ,Physical
 Salaire prix et profit,Salaire prix et profit,Booklets,5.0,M1554524,Y, ,Physical
+Programme of the International,Programme of the International,Booklets,5.0,M6544034,Y, ,Physical
 Le Programme de transition,Le Programme de transition,Booklets,5.0,M2145756,Y, ,Physical
 Introduction au ma...tion au socialisme,Introduction au marxisme #1 : Introduction au socialisme,Booklets,5.0,M5044206,Y, ,Physical
 Introduction au ma...ilosophie marxiste,Introduction au marxisme #4 : Introduction à la philosophie marxiste,Booklets,5.0,M291544,Y, ,Physical
