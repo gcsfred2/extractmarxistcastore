@@ -38,6 +38,10 @@ def throttle():
             time.sleep(wait)
         _last_request_at = time.monotonic()
 
+# Shopify collection titles that should be reported under a different
+# category name in the output CSV.
+CATEGORY_RENAMES = {'In Defence of Marxism': 'IDOM'}
+
 # 429 = rate limited; 502/503/504 = transient upstream/proxy trouble. All worth retrying.
 RETRYABLE_STATUS_CODES = {429, 502, 503, 504}
 
@@ -107,6 +111,7 @@ def scrape_category(url, items_to_exclude, items_to_rename, max_items=4500):
                 main_page = True
                 category = soup.find('h2', class_='title').get_text(strip=True)
             category = category.replace('Collection:','')
+            category = CATEGORY_RENAMES.get(category, category)
             products = soup.find_all('li', class_='grid__item')
 
             if not products:
@@ -172,19 +177,6 @@ def scrape_marxist_store(categories, output_file, max_items_per_category=3500):
     # item names to be renamed
     items_to_rename = {row['title']: row['rename_to'] for row in read_csv_rows("items_to_rename.csv")}
 
-    # IDOM
-    for row in read_csv_rows("idom_items.csv"):
-        title_hash = int(hashlib.sha256(row['Item Name'].encode('utf-8')).hexdigest(), 16)
-        # avoid duplicates
-        if title_hash in prod_hashes:
-            continue
-        prod_hashes[title_hash] = True
-        title_hash = title_hash % 10000000
-        title_hash_str = "M" + str(title_hash)
-        # Parse price to float
-        price = float(re.sub(r"[^0-9.]", "", row['Price']))
-        all_items.append({'Item Name': row['Item Name'], 'Description': row['Description'], 'Reporting Category': 'IDOM', 'Price': price, 'SKU': title_hash_str, 'Sellable': 'Y', 'Variation Name': ' ', 'Item Type': 'Physical'})
-
     # website scraping
     for i, category_url in enumerate(categories):
         if i > 0:
@@ -204,6 +196,7 @@ def scrape_marxist_store(categories, output_file, max_items_per_category=3500):
 
 if __name__ == "__main__":
     category_urls = [
+        "https://store.marxist.ca/collections/in-defence-of-marxism",
         "https://store.marxist.ca/collections/books",
         "https://store.marxist.ca/collections/booklets",
         "https://store.marxist.ca/collections/papers"
